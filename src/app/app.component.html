@@ -26,6 +26,22 @@
     </div>
 
   </div>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <td>Sentence</td>
+        <td>Result</td>
+      </tr>
+      </thead>
+      <tr *ngFor="let item of dicc">
+        <td>{{item.sent}}</td>
+        <td>{{item.result}}</td>
+      </tr>
+    </table>
+  </div>
+
+
 </div>
 
 <router-outlet></router-outlet>

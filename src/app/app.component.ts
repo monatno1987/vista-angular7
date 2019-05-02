@@ -9,15 +9,21 @@ export class AppComponent  implements OnInit {
   title = 'wordscount';
   // @Input() employeeDetails = { sentence: '', email: '', phone: 0 };
     @Input() SentenceDetails = { sentence: ''};
+    dicc: object[];
+    sent:string;
   constructor(
     public restApi: ApiService
-  ) { }
+  ) {
+    this.dicc = [];
+  }
 
   ngOnInit() { }
 
     addSentence(dataSentence) {
+    this.sent = this.SentenceDetails.sentence;
     this.restApi.createSentence(this.SentenceDetails).subscribe((data: {}) => {
-      console.log(data);
+        this.SentenceDetails.sentence = '';
+      this.dicc.push({sent: this.sent, result: JSON.stringify(data)});
     });
   }
 
