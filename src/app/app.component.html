@@ -10,16 +10,10 @@
     <h3 class="mb-3 text-center">Sentence</h3>
 
     <div class="form-group">
-      <textarea type="text" [(ngModel)]="SentenceDetails.sentence" class="form-control" placeholder="Sentence"></textarea>
+      <textarea type="text" [(ngModel)]="SentenceDetails.sentence" class="form-control" placeholder="Sentence" maxlength="10000" required></textarea>
+
     </div>
 
-    <!--<div class="form-group">-->
-      <!--<input type="text" [(ngModel)]="employeeDetails.email" class="form-control" placeholder="Email">-->
-    <!--</div>-->
-
-    <!--<div class="form-group">-->
-      <!--<input type="text" [(ngModel)]="employeeDetails.phone" class="form-control" placeholder="Phone">-->
-    <!--</div>-->
 
     <div class="form-group">
       <button class="btn btn-success btn-lg btn-block" (click)="addSentence()">Validate</button>
