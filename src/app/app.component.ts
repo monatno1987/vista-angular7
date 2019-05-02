@@ -12,15 +12,13 @@ export class AppComponent  implements OnInit {
     @Input() SentenceDetails = { sentence: ''};
     dicc: object[];
     sent:string;
-  constructor(
-    public restApi: ApiService
+    constructor(
+      public restApi: ApiService
 
-  ) {
-    this.dicc = [];
-  }
-
+    ) {
+      this.dicc = [];
+    }
   ngOnInit() { }
-
 
     addSentence(dataSentence) {
     this.sent = this.SentenceDetails.sentence;
